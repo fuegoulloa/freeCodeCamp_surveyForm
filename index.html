@@ -6,88 +6,89 @@
 </head>
 <body>
 
-	<h1 id="title">FreeCodeCamp User Survey</h1>
+	<h1 id="title">freeCodeCamp Student Survey</h1>
 
 	<div id="form-outer"> <!-- This div holds everything // Parent Div -->
-  		<p id="description">Share your feedback on how to improve freeCodeCamp</p>
+  		<p id="description">Please share your feedback on how to improve freeCodeCamp!</p>
 
   		<!-- Form container/holder begins here -->
   		<form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
 
-    		<div class="rowTab">
+    		<div class="rowTab"> <!-- div to hold name input field -->
       			<div class="labels">
-        		<label id="name-label" for="name">* Name: </label>
+        			<label id="name-label" for="name"> Name: </label>
       			</div>
       			<div class="rightTab">
-        		<input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+        			<input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter full name" required>
       			</div>
-    		</div>
+    		</div> <!-- close name input field -->
 
-    		<div class="rowTab">
+    		<div class="rowTab"> <!-- div to hold email input field -->
       			<div class="labels">
-        		<label id="email-label" for="email">* Email: </label>
+        			<label id="email-label" for="email"> Email: </label>
       			</div>
       			<div class="rightTab">
-        		<input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+        			<input type="email" name="email" id="email" class="input-field" required placeholder="Enter valid email">
       			</div>
-    		</div>
+    		</div> <!-- close email input field -->
 
-    		<div class="rowTab">
+    		<div class="rowTab"> <!-- div for age input field -->
       			<div class="labels">
-        		<label id="number-label" for="age">* Age: </label>
+        			<label id="number-label" for="age"> Age: </label>
       			</div>
       			<div class="rightTab">
-        		<input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+        			<input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Enter age">
       			</div>
-    		</div>
-
-    		<div class="rowTab">
+    		</div> <!-- close age input field -->
+    		
+    		<div class="rowTab"> <!-- div for current role dropdown menu -->
       			<div class="labels">
-        		<label for="currentPos">Which option best describes your current role?</label>
+        			<label for="currentPos">Which option best describes your current role?</label>
       			</div>
       			<div class="rightTab">
         			<select id="dropdown" name="currentPos" class="dropdown">
-				      <option disabled value>Select an option</option>
-				      <option  value="student">Student</option>
+				      <option disabled selected>Select an option</option>
+				      <option value="student">Student</option>
 				      <option value="job">Full Time Job</option>
 				      <option value="learner">Full Time Learner</option>
 				      <option value="preferNo">Prefer not to say</option>
+				      <option value="curious">Curious</option>
 				      <option value="other">Other</option>
     				</select>
       			</div>
-    		</div>
-
-    		<div class="rowTab">
+    		</div> <!-- close current role dropdown menu -->
+    
+    		<div class="rowTab"> <!-- div for recommendation inputs -->
       			<div class="labels">
-        		<label for="userRating">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+        			<label for="userRating"> How likely is that you would recommend freeCodeCamp to a friend?</label>
       			</div>
       			<div class="rightTab">
         			<ul style="list-style: none;">
-			          <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
-			          <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
-			          <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+			          <li class="radio"><label>For sure!<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+			          <li class="radio"><label>Perhaps<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+			          <li class="radio"><label>Nah!<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
         			</ul>
       			</div>
-    		</div>
-
-    		<div class="rowTab">
+    		</div> <!-- close recommendation inputs -->
+    		
+    		<div class="rowTab"> <!-- div for most like inputs -->
       			<div class="labels">
-        		<label for="most-like">What do you like most in FCC: </label>
+        			<label for="mostLike">What do you like most in FCC? </label>
       			</div>
       			<div class="rightTab">
         			<select id="most-like" name="mostLike" class="dropdown">
-				      <option disabled selected value>Select an option</option>
+				      <option disabled selected>Select an option</option>
 				      <option value="challenges">Challenges</option>
 				      <option value="projects">Projects</option>
 				      <option value="community">Community</option>
 				      <option value="openSource">Open Source</option>
     				</select>
       			</div>
-    		</div>
-
-    		<div class="rowTab">
+    		</div> <!-- close most like inputs -->
+    		
+    		<div class="rowTab"> <!-- div for things to improve inputs -->
       			<div class="labels">
-        		<label for="preferences">Things that should be improved in the future<br>(Check all that apply): </label>
+        			<label for="preferences">What should be improved in the future? <br>(Check all that apply) </label>
       			</div>
       			<div class="rightTab">
         			<ul id="preferences" style="list-style: none;">
@@ -96,27 +97,30 @@
 			          <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Data Visualization</label></li>
 			          <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Challenges</label></li>
 			          <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Open Source Community</label></li>
-			          <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Gitter help rooms</label></li>
+			          <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Gitter Help Rooms</label></li>
 			          <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Videos</label></li>
 			          <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">City Meetups</label></li>
 			          <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" class="userRatings">Wiki</label></li>
 			          <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Forum</label></li>
-			          <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Additional Courses</label></li>
+			          <li class="checkbox"><label><input name="prefer" value="11" type="checkbox" class="userRatings">Additional Courses</label></li>
         			</ul>
       			</div>
-    		</div>
-
-    		<div class="rowTab">
+    		</div> <!-- close things to improve inputs -->
+    		
+    		<div class="rowTab"> <!-- div for comments input section -->
       			<div class="labels">
-        		<label for="comments">Any Comments or Suggestions?</label>
+        			<label for="comment">Any Comments or Suggestions?</label>
       			</div>
       			<div class="rightTab">
-        		<textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+        			<textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comments here..."></textarea>
       			</div>
-    		</div>
-
+    		</div> <!-- close comments input section -->
+    		
+    		<!-- Submit Button -->
     		<button id="submit" type="submit">Submit</button>
+
   		</form><!-- End of Form -->
+
 	</div> <!-- End or Parent Div -->
 
 </body>
