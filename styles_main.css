@@ -8,12 +8,6 @@ html, body {
   min-width: 320px;
 }
 
-/*header {
-  font-size: 2em;
-  font-weight: bold;
-  margin: 20px;
-}*/
-
 #form-outer {
   background-color: rgb(250, 250, 250);
   margin: 0 auto;
